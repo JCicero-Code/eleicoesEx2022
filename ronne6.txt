@@ -1,7 +1,7 @@
 import enum
 
-class Erro_calculadora(enum.Enum):
-    err_divisao_zero = 1
+class Erro_operacao(enum.Enum):
+    erro_caractere = 1
 bruno = 0
 ronne = 0
 pedrin = 0
@@ -56,7 +56,7 @@ while operacao != "5":
       break;
   elif (operacao > "5"):
      
-      res = Erro_calculadora.err_divisao_zero
+      res = Erro_operacao.erro_caractere
       break;
       print("Você escolheu", operacao)
   
@@ -72,7 +72,7 @@ while operacao != "5":
   elif (numero1 != "4")or(numero1 != "515")or(numero1 != "847")or(numero1 != "889"):
      nulos += 1
      
-  if (res == Erro_calculadora.err_divisao_zero):
+  if (res == Erro_operacao.erro_caractere):
       print("Número errado")
   else:
     print("Voto efetuato")
