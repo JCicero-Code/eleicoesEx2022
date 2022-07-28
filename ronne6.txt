@@ -1,0 +1,78 @@
+import enum
+
+class Erro_calculadora(enum.Enum):
+    err_divisao_zero = 1
+bruno = 0
+ronne = 0
+pedrin = 0
+operacao = ""
+res = ""
+votoBranco = 0
+nulos = 0
+while operacao != "5":
+  print("------------------")
+  print("Eleições Ex 2022")
+  print("------------------")
+  print("")
+  print("Digite 1 para votar")
+  print("----------------")
+  print("Bruno de guga. Seu número é: 889")
+  print("Ronne da barragem. Seu número é: 847")
+  print("Pedrin da água. Seu número é: 515")
+  print("Digite 4: Voto em branco.")
+  print("----------------")
+  print("Digite 5: Sair")
+  print("----------------")
+  print("")
+  operacao = input("Escolha o que deseja fazer: ")
+  if operacao == "5":
+      print("Obrigado! Por participar")
+      print("----------------")
+      print("O resultado da eleição é: ")
+      if (bruno > ronne) and (bruno > pedrin):
+          print("Em 1° lugar Bruno com: ",bruno)
+          print("----------------")
+          print("Ronne teve: ",ronne)
+          print("Pedrin teve: ",pedrin)
+          print("Brancos: ",votoBranco)
+          print("Nulos: ",nulos)
+      elif (ronne > bruno)and(ronne>pedrin):
+          print("Em 1° lugar Ronne com: ",ronne)
+          print("----------------")
+          print("Bruno teve: ",bruno)
+          print("Pedrin teve: ",pedrin)
+          print("Brancos: ",votoBranco)
+          print("Nulos: ",nulos)
+      elif (pedrin > ronne)and(pedrin>bruno):
+          print("Em 1° lugar Pedrin com: ",pedrin)
+          print("----------------")
+          print("Bruno teve: ",bruno)
+          print("Ronne teve: ",ronne)
+          print("Brancos: ",votoBranco)
+          print("Nulos: ",nulos)
+     
+      
+      
+      break;
+  elif (operacao > "5"):
+     
+      res = Erro_calculadora.err_divisao_zero
+      break;
+      print("Você escolheu", operacao)
+  
+  numero1 = input("Digite o número do seu candidato: ")
+  if numero1 == "889":
+     bruno += 1
+  elif numero1 == "847":
+     ronne += 1
+  elif numero1 == "515":
+     pedrin += 1
+  elif numero1 == "4":
+     votoBranco += 1
+  elif (numero1 != "4")or(numero1 != "515")or(numero1 != "847")or(numero1 != "889"):
+     nulos += 1
+     
+  if (res == Erro_calculadora.err_divisao_zero):
+      print("Número errado")
+  else:
+    print("Voto efetuato")
